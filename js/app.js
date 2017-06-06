@@ -12,7 +12,7 @@ confirm('It\'s time to play a knowledge game about me! I\'ll keep track of your 
 
 // Question #1
 response = prompt('Question 1: Do I have a lisp?','Yes or No?').toLowerCase();
-console.log(response);
+console.log('User Response #1: ' + response);
 
 if(response === 'yes' || response === 'y') {
   alert('Very good! Of courth I have a lithp! +1 POINT');
@@ -22,12 +22,12 @@ if(response === 'yes' || response === 'y') {
 } else {
   alert('You didn\'t follow the directions, no point for you...');
 }
-console.log(userPoints);
+console.log('Current Points: ' + userPoints);
 
 
 // Question #2
 response = prompt('Question 2: Do I have a brain?','Yes or No?').toLowerCase();
-console.log(response);
+console.log('User Response #2: ' + response);
 
 if(response === 'yes' || response === 'y') {
   alert('Right! Or else I couldn\'t have written this site! +1 POINT');
@@ -37,12 +37,12 @@ if(response === 'yes' || response === 'y') {
 } else {
   alert('You didn\'t follow the directions, no point for you...');
 }
-console.log(userPoints);
+console.log('Current Points: ' + userPoints);
 
 
 // Question #3
 response = prompt('Question 3: Do I wear short shorts?','Yes or No?').toLowerCase();
-console.log(response);
+console.log('User Response #3: ' + response);
 
 if(response === 'yes' || response === 'y') {
   alert('Only the shortest!! +1 POINT');
@@ -52,12 +52,12 @@ if(response === 'yes' || response === 'y') {
 } else {
   alert('You didn\'t follow the directions, no point for you...');
 }
-console.log(userPoints);
+console.log('Current Points: ' + userPoints);
 
 
 // Question #4
 response = prompt('Question 4: Do I own a unicorn?','Yes or No?').toLowerCase();
-console.log(response);
+console.log('User Response #4: ' + response);
 
 if(response === 'yes' || response === 'y') {
   alert('NOPE. I own two unicorns...');
@@ -67,12 +67,12 @@ if(response === 'yes' || response === 'y') {
 } else {
   alert('You didn\'t follow the directions, no point for you...');
 }
-console.log(userPoints);
+console.log('Current Points: ' + userPoints);
 
 
 // Question #5
 response = prompt('Question 5: Do I sleep in class?','Yes or No?').toLowerCase();
-console.log(response);
+console.log('User Response #5: ' + response);
 
 if(response === 'yes' || response === 'y') {
   alert('That\'s just wrong....of course I don\'t. Do you?');
@@ -82,7 +82,7 @@ if(response === 'yes' || response === 'y') {
 } else {
   alert('You didn\'t follow the directions, no point for you...');
 }
-console.log(userPoints);
+console.log('Current Points: ' + userPoints);
 
 
 //Final prompt for total score
