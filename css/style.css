@@ -1,0 +1,10 @@
+body {
+  background-image: url("../images/whimsical.jpg");
+  background-color: black;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 5em;
+}
