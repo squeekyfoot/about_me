@@ -1,17 +1,22 @@
 'use strict';
 
-// Variables needed
+// Variables needed for this page
+var userName = '';
 var userPoints = 0;
 var response = '';
+var remainingAttempts = 4;
+var incorrect = true;
+var favoriteShows = ['lost','dexter','sons of anarchy','breaking bad','the office','arrested development','narcos','family guy','spartacus','the league'];
 
 // Prompt user with 5 different questions about me
 
 // Initial prompt message
-confirm('It\'s time to play a knowledge game about me! I\'ll keep track of your points as we go along...');
+userName = prompt('It\'s time to play a knowledge game about me! I\'ll keep track of your points as we go along. Let\'s start by entering your name...','Enter name here');
+console.log('User\'s name: ' + userName);
 
 
 // Question #1
-response = prompt('Question 1: Do I have a lisp?','Yes or No?').toLowerCase();
+response = prompt('Alright, ' + userName + ', let\'s begin! Question 1: Do I have a lisp?','Yes or No?').toLowerCase();
 console.log('User Response #1: ' + response);
 
 if(response === 'yes' || response === 'y') {
@@ -85,9 +90,64 @@ if(response === 'yes' || response === 'y') {
 console.log('Current Points: ' + userPoints);
 
 
-//Final prompt for total score
-if(userPoints > 3) {
-  alert('Great work! You earned ' + userPoints + ' points! You seem to know quite a bit about me.');
+// Question #6 - With 4 attempts at guessing correctly
+//Four attempts to guess correctly
+//While not correct and have more guesses:
+
+while (incorrect && remainingAttempts > 0) {
+  response = prompt('Question 6: How many cards do I carry in my back pocket? You have ' + remainingAttempts + ' attempt(s) remaining.','Enter a number');
+  console.log('Question 6 - User response: ' + response);
+  console.log('Remaining attempts: ' + remainingAttempts);
+  if (response == 4) {
+    alert('Correct! I usually carry 4 cards on me at all times.');
+    incorrect = false;
+    userPoints++;
+  } else if (response > 4) {
+    remainingAttempts--;
+    alert('Sorry, it\'s less than that. You have ' + remainingAttempts + ' attempts left.');
+  } else if (response < 4) {
+    remainingAttempts--;
+    alert('Sorry, it\'s more than that. You have ' + remainingAttempts + ' attempts left.');
+  } else {
+    remainingAttempts--;
+    alert('Sorry, you need to enter a number... You have ' + remainingAttempts + ' attempts left.');
+  }
+}
+
+//Reset variables that I can reuse in Question #7
+
+incorrect = true;
+remainingAttempts = 6;
+
+//Question #7 - multiple answers with six attempts given
+//while user hasn't guessed a correct item from array
+
+while (incorrect && remainingAttempts > 0) {
+  response = prompt('Question 7: Can you guess one of my several favorite TV shows on Netflix? You have ' + remainingAttempts + ' attempt(s) remaining.','Enter show title').toLowerCase();
+  console.log('Question 7 - User Response:' + response);
+  console.log('Remaining Attempts: ' + remainingAttempts);
+  if (favoriteShows.indexOf(response) > -1) {
+    alert('Wow! Great job, you guessed correctly.');
+    incorrect = false;
+    userPoints++;
+  } else {
+    remainingAttempts--;
+    alert('Sorry, that isn\'t one of them. You have ' + remainingAttempts + ' attempts left.');
+  }
+}
+
+//Display message to the user with all possible answers to Question 7
+
+if (incorrect) {
+  alert('Better luck next time. Possible answers were: ' + favoriteShows.join(', '));
 } else {
-  alert('It\'s time for you to get to know me. You only scored ' + userPoints + ' points. Try again.');
+  alert('All possible answers were: ' + favoriteShows.join(', '));
+}
+
+
+//Final prompt for total score
+if(userPoints > 4) {
+  alert('Great work, ' + userName + '! You earned ' + userPoints + ' out of 7 points! You seem to know quite a bit about me.');
+} else {
+  alert('It\'s time for you to get to know me, ' + userName + '. You only scored ' + userPoints + ' out of 7 points. Try again.');
 }

@@ -3,8 +3,19 @@ body {
   background-color: black;
 }
 
-h1 {
+header {
+  font-size: 3em;
   color: white;
   text-align: center;
-  font-size: 5em;
+}
+
+section {
+  display: block;
+  position: relative;
+  margin: 10px auto;
+  padding: 8px;
+  width: 400px;
+  color: white;
+  text-align: center;
+  background-color: teal;
 }
