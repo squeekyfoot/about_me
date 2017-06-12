@@ -95,11 +95,17 @@ function question5() {
   console.log('Current Points: ' + userPoints);
 }
 //Calling functions 1 - 5
+console.log('Variable response is: ' + response);
 question1();
+console.log('Variable response is: ' + response);
 question2();
+console.log('Variable response is: ' + response);
 question3();
+console.log('Variable response is: ' + response);
 question4();
+console.log('Variable response is: ' + response);
 question5();
+console.log('Variable response is: ' + response);
 
 // Question #6 - With 4 attempts at guessing correctly
 //Four attempts to guess correctly

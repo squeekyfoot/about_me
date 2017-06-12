@@ -1,9 +1,16 @@
 body {
-  background-image: url("../images/whimsical.jpg");
-  background-color: black;
+  background: #000000 url("../images/whimsical.jpg") fixed;
+}
+
+div#main {
+  display: block;
+  width: 700px;
+  height: 100%;
+  margin: auto;
 }
 
 header {
+  font-family: 'Merienda One', cursive;
   font-size: 3em;
   color: white;
   text-align: center;
@@ -12,10 +19,29 @@ header {
 section {
   display: block;
   position: relative;
-  margin: 10px auto;
+  margin: 25px auto;
+  border-radius: 20px;
+  border: 5px solid white;
   padding: 8px;
   width: 400px;
   color: white;
   text-align: center;
-  background-color: teal;
+  background-color: hsl(156, 39%, 31%);
+}
+
+h2 {
+  font-family: 'Merienda One', cursive;
+}
+
+li {
+  font-family: 'Ruluko', sans-serif;
+  font-size: 1.2em;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ol {
+  list-style-type: upper-roman;
 }
